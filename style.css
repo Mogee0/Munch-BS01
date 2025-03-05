@@ -1,0 +1,119 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Buttercy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+    color: #D33301;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.invoice-container {
+    background: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    width: 60%;
+    border: 2px solid #D33301;
+}
+
+h1 {
+    font-family: 'Buttercy', cursive;
+    text-align: center;
+    font-size: 28px;
+    color: #D33301;
+}
+
+.invoice-details p {
+    font-weight: 600;
+    color: #D33301;
+    font-size: 16px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #ECE8C7;
+}
+
+table, th, td {
+    border: 1px solid #D33301;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background: #D33301;
+    color: white;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    background: #D33301;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #ECE8C7;
+    color: #D33301;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Amount Section */
+.amount-section {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #D33301;
+    font-size: 16px;
+    background: #ECE8C7;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Signature Box */
+.signature-box {
+    margin-top: 20px;
+    border: 2px dashed #D33301;
+    padding: 30px;
+    text-align: center;
+    color: #D33301;
+    font-weight: bold;
+    font-size: 16px;
+    background: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .invoice-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}

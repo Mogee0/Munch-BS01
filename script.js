@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <td contenteditable="true" class="quantity">1</td>
             <td contenteditable="true" class="price">0</td>
             <td class="total">0</td>
+            <td contenteditable="true" class="bank-details">Default Bank</td>
         `;
         tableBody.appendChild(newRow);
         newRow.querySelectorAll("td").forEach(cell => {
@@ -49,18 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function generatePDF() {
-        const elementsToHide = document.querySelectorAll(".hide-on-print, button");
+        const elementsToHide = document.querySelectorAll(".hide-on-print, .action-buttons");
         elementsToHide.forEach(el => el.style.display = "none");
-    
+        
         setTimeout(() => {
             window.print();
-            elementsToHide.forEach(el => el.style.display = "block");
+            elementsToHide.forEach(el => el.style.display = "flex");
         }, 200);
     }
-    
 
     function shareInvoice() {
-        const companyName = document.getElementById("company-name").innerText;
+        const companyName = document.getElementById("company-name").value;
         const totalAmount = document.getElementById("total-amount").innerText;
         const message = `Invoice from ${companyName}: Total Amount ₹${totalAmount}`;
         const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
@@ -76,10 +76,20 @@ document.addEventListener("DOMContentLoaded", function () {
     window.generatePDF = generatePDF;
     window.shareInvoice = shareInvoice;
 
-// Update footer styling dynamically
-const footer = document.querySelector("footer");
-footer.style.textAlign = "center";
-footer.style.fontFamily = "'Dancing Script', cursive";
-footer.style.color = "blue";
-footer.style.fontWeight = "bold";
+    // Populate dropdowns
+    const companyDropdown = document.getElementById("company-name");
+    const customerDropdown = document.getElementById("customer-name");
+    ["Company A", "Company B", "Company C"].forEach(company => {
+        let option = document.createElement("option");
+        option.value = company;
+        option.textContent = company;
+        companyDropdown.appendChild(option);
+    });
+
+    ["Customer 1", "Customer 2", "Customer 3", "Customer 4", "Customer 5"].forEach(customer => {
+        let option = document.createElement("option");
+        option.value = customer;
+        option.textContent = customer;
+        customerDropdown.appendChild(option);
+    });
 });

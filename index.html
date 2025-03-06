@@ -10,16 +10,22 @@
 <body>
     <div class="invoice-container" id="invoice">
         <header>
-            <h1 id="company-name" contenteditable="true">Your Company Name</h1>
-            <div class="invoice-details">
-                <p><strong>Customer:</strong> <span contenteditable="true">Customer Company Name</span></p>
-                <p><strong> Address:</strong> <span contenteditable="true">Address of the Customer company </span></p>
-                <p><strong>Date:</strong> <input type="date" id="invoice-date"></p>
-                <p><strong>Bill No:</strong> <span contenteditable="true">0001</span></p>
-            </div>
-        </header>
-        
-        <table>
+    <h1>
+        <label for="company-name">Company Name:</label>
+        <select id="company-name"></select>
+         <p><strong> Address:</strong> <span contenteditable="true"> company </span></p>
+    </h1>
+    <div class="invoice-details">
+        <p>
+            <strong>Customer:</strong>
+            <select id="customer-name"></select>
+             <p><strong> Address:</strong> <span contenteditable="true">Address of the Customer company </span></p>
+        </p>
+        <p><strong>Date:</strong> <input type="date" id="invoice-date"></p>
+        <p><strong>Bill No:</strong> <span contenteditable="true">0001</span></p>
+    </div>
+</header>
+ <table>
             <thead>
                 <tr>
                     <th>Product</th>
@@ -34,6 +40,7 @@
                     <td contenteditable="true" class="quantity">1</td>
                     <td contenteditable="true" class="price">0</td>
                     <td class="total">0</td>
+                     <td contenteditable="true" class="bank-details">Default Bank</td> <!-- Bank Column -->
                 </tr>
             </tbody>
         </table>

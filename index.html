@@ -40,12 +40,25 @@
                     <td contenteditable="true" class="quantity">1</td>
                     <td contenteditable="true" class="price">0</td>
                     <td class="total">0</td>
-                     <td contenteditable="true" class="bank-details">Default Bank</td> <!-- Bank Column -->
                 </tr>
             </tbody>
         </table>
         <button onclick="addRow()">Add Item</button>
-        
+       <table>
+           <thead>
+               <tr>
+               <th>Bank Name </th>
+               <th>Account number</th>
+               <th> IFSC Code </th>
+                   </tr>
+           </thead>
+           <tbody id="Bank-Detail">
+               <tr>
+                    <td contenteditable="true">Bank Name </td>
+                    <td contenteditable="true" class="Account Number">1614</td>
+                    <td contenteditable="true" class="IFSC Code">IFSC Code</td>
+               </tr>
+       </table>
         <div class="amount-section">
             <p><strong>Total Amount:</strong> ₹<span id="total-amount">0</span></p>
             <p><strong>Amount in Words:</strong> <span id="amount-words">Zero Rupees</span></p>

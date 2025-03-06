@@ -13,7 +13,6 @@
             <h1 id="company-name" contenteditable="true">Your Company Name</h1>
             <div class="invoice-details">
                 <p><strong>Customer:</strong> <span contenteditable="true">Customer Company Name</span></p>
-                <p><strong> Address:</strong> <span contenteditable="true">Address of the Customer company </span></p>
                 <p><strong>Date:</strong> <input type="date" id="invoice-date"></p>
                 <p><strong>Bill No:</strong> <span contenteditable="true">0001</span></p>
             </div>
@@ -47,10 +46,9 @@
         </div>
         
         <footer>
-            <p>Thank You For Your business !</p>
-
+            <p>Thank you for your business!</p>
             <div class="signature-box">
-                <p>            </p>
+                <p>Authorized Sign:</p>
                 <div class="sign-area"></div>
             </div>
         </footer>
@@ -58,6 +56,7 @@
     
     <button onclick="generatePDF()">Download PDF</button>
     <button onclick="shareInvoice()">Share Invoice</button>
+    
     <script src="script.js"></script>
     <script>
         function generatePDF() {
@@ -82,16 +81,6 @@
                 }
             });
         }
-        function generatePDF() {
-        const elementsToHide = document.querySelectorAll(".hide-on-print, button");
-        elementsToHide.forEach(el => el.style.display = "none");
-    
-        setTimeout(() => {
-            window.print();
-            elementsToHide.forEach(el => el.style.display = "block");
-        }, 200);
-    }
     </script>
-    
 </body>
 </html>

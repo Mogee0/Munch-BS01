@@ -100,9 +100,9 @@ button:hover {
 
 /* Signature Box */
 .signature-box {
-    margin-top: 15px;
+    margin-top: 4px;
     border: 2px dashed #000000;
-    padding: 1px;
+    padding: 10px;
     text-align: right;
     color: #000000;
     font-weight: bold;

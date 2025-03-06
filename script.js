@@ -79,17 +79,26 @@ document.addEventListener("DOMContentLoaded", function () {
     // Populate dropdowns
     const companyDropdown = document.getElementById("company-name");
     const customerDropdown = document.getElementById("customer-name");
-    ["Company A", "Company B", "Company C"].forEach(company => {
+    ["Bhavani Catering Service", "Tamilnadu Catering Service", "Hemasri Mahal"].forEach(company => {
         let option = document.createElement("option");
         option.value = company;
         option.textContent = company;
         companyDropdown.appendChild(option);
     });
 
-    ["Customer 1", "Customer 2", "Customer 3", "Customer 4", "Customer 5"].forEach(customer => {
+    ["J Roy McDermott Engineering Service Pvt Ltd", "Customer 2",].forEach(customer => {
         let option = document.createElement("option");
         option.value = customer;
         option.textContent = customer;
         customerDropdown.appendChild(option);
     });
+
+    // Ensure the bill fits within A4 size in PDF
+    const invoiceContainer = document.querySelector(".invoice-container");
+    invoiceContainer.style.maxWidth = "210mm"; // A4 width
+    invoiceContainer.style.padding = "10mm";
+
+    // Apply 'Playfair Display' font to company name
+    const companyNameElement = document.getElementById("company-name");
+    companyNameElement.style.fontFamily = "'Playfair Display', serif";
 });

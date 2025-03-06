@@ -1,32 +1,32 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Buttercy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 /* General Styles */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #FFFFFF;
-    color: #000000;
+    color: #D33301;
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
 }
 
 .invoice-container {
     background: #FFFFFF;
-    padding: 20px;
+    padding: 10mm;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    width: 60%;
-    border: 2px solid #000000;
+    width: 210mm; /* A4 width */
+    max-width: 100%;
+    border: 2px solid #D33301;
 }
 
 h1 {
-    font-family: 'Buttercy', cursive;
+    font-family: 'Playfair Display', serif;
     text-align: center;
     font-size: 28px;
     color: #D33301;
@@ -34,7 +34,7 @@ h1 {
 
 .invoice-details p {
     font-weight: 600;
-    color: #000000;
+    color: #D33301;
     font-size: 16px;
 }
 
@@ -47,7 +47,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #000000;
+    border: 1px solid #D33301;
 }
 
 th, td {
@@ -57,9 +57,19 @@ th, td {
 }
 
 th {
-    background: #000000;
+    background: #D33301;
     color: white;
     font-weight: bold;
+}
+
+/* Dropdown Styling */
+select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #D33301;
+    border-radius: 5px;
+    background: white;
+    color: #D33301;
 }
 
 /* Buttons */
@@ -74,6 +84,7 @@ button {
     transition: 0.3s;
     font-size: 16px;
     border-radius: 5px;
+    width: 100%;
 }
 
 button:hover {
@@ -81,23 +92,19 @@ button:hover {
     color: #D33301;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.action-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 15px;
-}
+
 /* Amount Section */
 .amount-section {
     margin-top: 20px;
     font-weight: 600;
-    color: #000000;
+    color: #D33301;
     font-size: 16px;
     background: #ECE8C7;
     padding: 15px;
     border-radius: 5px;
 }
 
+/* Signature Box */
 .signature-box {
     display: flex;
     justify-content: flex-end;
@@ -113,12 +120,18 @@ button:hover {
     background: #fff;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+    .invoice-container {
+        width: 90%;
+        padding: 10px;
+    }
     .signature-box {
         width: 100%;
         justify-content: center;
-        margin-right: 0;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
     }
 }
-
-

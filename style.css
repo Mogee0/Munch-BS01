@@ -35,7 +35,7 @@ h1 {
 .invoice-details p {
     font-weight: 600;
     color: #D33301;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* Table Styling */
@@ -53,7 +53,7 @@ table, th, td {
 th, td {
     padding: 12px;
     text-align: left;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 th {
@@ -65,7 +65,7 @@ th {
 /* Dropdown Styling */
 select {
     padding: 5px;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid #D33301;
     border-radius: 5px;
     background: white;
@@ -82,7 +82,7 @@ button {
     font-weight: bold;
     margin-top: 15px;
     transition: 0.3s;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
     width: 100%;
 }
@@ -98,7 +98,7 @@ button:hover {
     margin-top: 20px;
     font-weight: 600;
     color: #D33301;
-    font-size: 16px;
+    font-size: 14px;
     background: #ECE8C7;
     padding: 15px;
     border-radius: 5px;
@@ -111,10 +111,10 @@ button:hover {
     align-items: center;
     border: 2px dashed #D33301;
     padding: 20px;
-    width: 200px;
+    width: 150px;
     height: 40px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 20px;
     text-align: center;
     background: #fff;
